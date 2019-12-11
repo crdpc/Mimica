@@ -17,28 +17,8 @@ namespace Mimica.View
         public Inicio()
         {
             InitializeComponent();
-            BindingContext = new Grupo();
+            BindingContext = new ViewModel.InicioViewModel();
 
-        }
-        public class Grupo : INotifyPropertyChanged
-        {
-            private string _NomeGrupo1;
-
-            public string NomeGrupo1 { get { return _NomeGrupo1; }  set { _NomeGrupo1 = value; PropriedadeMudada("NomeGrupo1"); } } 
-
-            public Grupo()
-            {
-                NomeGrupo1 = "Os Machos";
-            }
-
-            public event PropertyChangedEventHandler PropertyChanged;
-            private void PropriedadeMudada(string NomePropriedade)
-            {
-                if (PropertyChanged != null)
-                {
-                    PropertyChanged(this, new PropertyChangedEventArgs(NomePropriedade));
-                }
-            }
         }
 
     }

@@ -7,6 +7,6 @@ namespace Mimica.Model
     public class Grupo
     {
         public string Nome { get; set; }
-        public short Ponntuacao { get; set; }
+        public short Pontuacao { get; set; }
     }
 }
